@@ -148,25 +148,89 @@ def get_lastfm_data():
     try:
         api_key = app.config['LASTFM_API_KEY']
         username = app.config['LASTFM_USERNAME']
-        url = f"http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user={username}&api_key={api_key}&format=json&limit=1"
-        response = requests.get(url, timeout=5)
+
+        # Step 1: Get recent track
+        recent_url = f"http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user={username}&api_key={api_key}&format=json&limit=1"
+        response = requests.get(recent_url, timeout=5)
         data = response.json()
-        
+
         if 'recenttracks' in data and 'track' in data['recenttracks']:
-            tracks = data['recenttracks']['track']
-            if tracks and len(tracks) > 0:
-                track = tracks[0]
-                return {
-                    'artist': track.get('artist', {}).get('#text', 'Unknown Artist'),
-                    'title': track.get('name', 'Unknown Track'),
-                    'album': track.get('album', {}).get('#text', 'Unknown Album'),
-                    'image': track.get('image', [{}])[-1].get('#text', '/static/img/default_album.png'),
-                    'now_playing': '@attr' in track and 'nowplaying' in track['@attr']
-                }
-        return None
+            track = data['recenttracks']['track'][0]
+            artist = track.get('artist', {}).get('#text', 'Unknown Artist')
+            title = track.get('name', 'Unknown Track')
+            album = track.get('album', {}).get('#text', 'Unknown Album')
+            now_playing = track.get('@attr', {}).get('nowplaying') == 'true'
+
+            # Default image
+            image_url = '/static/img/default_album.png'
+
+            # Step 2: Try getting image from track.getInfo
+            track_info_url = (
+                f"http://ws.audioscrobbler.com/2.0/"
+                f"?method=track.getInfo&api_key={api_key}&artist={requests.utils.quote(artist)}"
+                f"&track={requests.utils.quote(title)}&format=json"
+            )
+            track_info_resp = requests.get(track_info_url, timeout=5)
+            track_info = track_info_resp.json()
+
+            if 'track' in track_info and 'album' in track_info['track']:
+                images = track_info['track']['album'].get('image', [])
+                if images:
+                    image_url = images[-1].get('#text', image_url)
+
+            # Step 3: If image still missing, fallback to album.getInfo
+            if not image_url or image_url == '':
+                album_info_url = (
+                    f"http://ws.audioscrobbler.com/2.0/"
+                    f"?method=album.getinfo&api_key={api_key}&artist={requests.utils.quote(artist)}"
+                    f"&album={requests.utils.quote(album)}&format=json"
+                )
+                album_info_resp = requests.get(album_info_url, timeout=5)
+                album_info = album_info_resp.json()
+                print(album_info)
+
+                if 'album' in album_info:
+                    images = album_info['album'].get('image', [])
+                    if images:
+                        for img in images:
+                            if img.get('size') == 'large' and img.get('#text'):
+                                image_url = img['#text']
+                                break
+
+
+            # Final fallback
+            if not image_url:
+                image_url = '/static/img/default_album.png'
+
+            return {
+                'artist': artist,
+                'title': title,
+                'album': album,
+                'image': image_url,
+                'now_playing': now_playing
+            }
+
+        # No track case
+        return {
+            'artist': 'Nothing playing',
+            'title': 'No recent track',
+            'album': '-',
+            'image': '/static/img/default_album.png',
+            'now_playing': False
+        }
+
     except Exception as e:
         print(f"Error fetching Last.fm data: {e}")
-        return None
+        return {
+            'artist': 'Error',
+            'title': 'Could not fetch data',
+            'album': '-',
+            'image': '/static/img/default_album.png',
+            'now_playing': False
+        }
+
+
+
 
 # Routes
 @app.route('/')
