@@ -791,7 +791,7 @@ main {
 
 .shoutbox-form {
   padding: 1rem;
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: auto auto;
   gap: 1rem;
