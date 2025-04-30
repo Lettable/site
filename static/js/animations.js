@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("animated")
+          entry.target.style.opacity = "1"
           observer.unobserve(entry.target)
         }
       })
