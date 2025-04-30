@@ -91,6 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
       focused: "🧐",
       tired: "😴",
       excited: "🤩",
+      sad: "😫",
+      angry: "😾"      
     }
 
     moodEmoji.textContent = emojiMap[mood] || "😊"
@@ -208,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
       sendContactBtn.disabled = true
 
       setTimeout(() => {
-        alert("Message sent successfully! This is a demo, so no actual email was sent.")
+        alert("Nigger contact me on Telegram.")
         nameInput.value = ""
         emailInput.value = ""
         subjectInput.value = ""
@@ -253,12 +255,14 @@ document.addEventListener("DOMContentLoaded", () => {
       if (moodIndicator) {
         moodIndicator.setAttribute("data-mood", data.mood)
 
-        const emojiMap = {
+        const emojiMap = 
           happy: "😊",
           neutral: "😐",
           focused: "🧐",
           tired: "😴",
           excited: "🤩",
+          sad: "😫",
+          angry: "😾" 
         }
 
         if (moodEmoji) moodEmoji.textContent = emojiMap[data.mood] || "😊"
