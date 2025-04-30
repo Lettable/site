@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hire Me - Portfolio</title>
+    <title>Mirza</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap">
@@ -17,7 +17,7 @@
     
     <header>
         <div class="logo" id="logo">
-            <span class="logo-text">Portfolio</span>
+            <span class="logo-text">Mirza</span>
             <div class="status-indicator" data-status="{{ status.status }}">
                 <span class="status-dot"></span>
                 <span class="status-text">{{ status.status }}</span>
@@ -68,7 +68,7 @@
     <main>
         <section id="hero" class="hero">
             <div class="hero-content">
-                <h1 class="animated-text">Hi, I'm <span class="highlight">Your Name</span></h1>
+                <h1 class="animated-text">Hi, I'm <span class="highlight">Mirza</span></h1>
                 <p class="tagline">Expert in <span class="typing-text" id="typingText">Coding, Automation, DevOps, Networking</span></p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn primary-btn">Hire Me</a>
@@ -304,15 +304,15 @@
                 </div>
                 
                 <div class="shoutbox-form">
-                    <input type="text" id="usernameInput" placeholder="Your name" maxlength="20">
-                    <textarea id="messageInput" placeholder="Type your message..." maxlength="500"></textarea>
-                    <button id="sendMessageBtn" class="btn primary-btn">Send</button>
+                    <input type="text" id="usernameInput" placeholder="Your name" maxlength="20" style="height: 48px;">
+                    <textarea id="messageInput" placeholder="Type your message..." maxlength="100" style="height: 48px; width: 123vh;"></textarea>
+                    <button id="sendMessageBtn" class="btn primary-btn" style="height: 48px;">Send</button>
                 </div>
             </div>
         </section>
         
         <section id="music-player" class="music-player">
-            <h2>Now <span class="highlight">Playing</span></h2>
+            <h2>What I’ve Recently<span class="highlight">Listened To</span></h2>
             <div class="music-container" id="musicContainer">
                 <div class="music-info">
                     <div class="album-cover" id="albumCover" style="background-image: url('{{ music_data.image if music_data else '/static/img/default_album.png' }}')"></div>
@@ -341,7 +341,7 @@
                         <div class="contact-icon email-icon"></div>
                         <div class="contact-text">
                             <h3>Email</h3>
-                            <p>your.email@example.com</p>
+                            <p>contact@mirza.ink</p>
                         </div>
                     </div>
                     
@@ -349,7 +349,7 @@
                         <div class="contact-icon location-icon"></div>
                         <div class="contact-text">
                             <h3>Location</h3>
-                            <p>Your City, Country</p>
+                            <p>Internet :)</p>
                         </div>
                     </div>
                     
@@ -392,7 +392,7 @@
             </div>
         </section>
         
-        <section id="ads" class="ads">
+<!--         <section id="ads" class="ads">
             <h2>Cool <span class="highlight">Links</span></h2>
             <div class="ads-container">
                 <div class="ad-card">
@@ -422,7 +422,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
     
     <footer>
@@ -453,7 +453,7 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; <span id="currentYear">2023</span> Your Name. All rights reserved.</p>
+            <p>&copy; <span id="currentYear">2025</span> Mirza.ink All rights reserved.</p>
             <p class="easter-egg-text">There are secrets waiting to be found...</p>
         </div>
     </footer>
