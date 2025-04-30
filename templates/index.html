@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Me - Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <meta name="description" content="Professional portfolio showcasing coding, automation, DevOps, and networking expertise">
+</head>
+<body>
+    <div class="rain-container" id="rainContainer"></div>
+    
+    <div class="cursor-container" id="cursorContainer"></div>
+    
+    <header>
+        <div class="logo" id="logo">
+            <span class="logo-text">Portfolio</span>
+            <div class="status-indicator" data-status="{{ status.status }}">
+                <span class="status-dot"></span>
+                <span class="status-text">{{ status.status }}</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="/gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#" id="settingsToggle" class="nav-link">Settings</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="menuToggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+    
+    <div class="settings-panel" id="settingsPanel">
+        <h3>Settings</h3>
+        <div class="settings-option">
+            <label for="showOwnCursor">Show Own Cursor</label>
+            <input type="checkbox" id="showOwnCursor" checked>
+        </div>
+        <div class="settings-option">
+            <label for="showOtherCursors">Show Other Cursors</label>
+            <input type="checkbox" id="showOtherCursors" checked>
+        </div>
+        <div class="settings-option">
+            <label for="playRainSound">Play Rain Sound</label>
+            <input type="checkbox" id="playRainSound">
+        </div>
+        <div class="settings-option">
+            <label for="showRainEffect">Show Rain Effect</label>
+            <input type="checkbox" id="showRainEffect" checked>
+        </div>
+        <div class="settings-option">
+            <label for="darkMode">Dark Mode</label>
+            <input type="checkbox" id="darkMode" checked>
+        </div>
+    </div>
+    
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1 class="animated-text">Hi, I'm <span class="highlight">Your Name</span></h1>
+                <p class="tagline">Expert in <span class="typing-text" id="typingText">Coding, Automation, DevOps, Networking</span></p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn primary-btn">Hire Me</a>
+                    <a href="#portfolio" class="btn secondary-btn">View Portfolio</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-image"></div>
+                <div class="mood-indicator" data-mood="{{ status.mood }}">
+                    <span class="mood-emoji" id="moodEmoji">😊</span>
+                    <span class="mood-text" id="moodText">{{ status.mood }}</span>
+                </div>
+            </div>
+        </section>
+        
+        <section id="services" class="services">
+            <h2>Services <span class="highlight">I Offer</span></h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon coding-icon"></div>
+                    <h3>Coding</h3>
+                    <p>Expert development in multiple languages and frameworks with a focus on clean, efficient code.</p>
+                    <ul class="service-details">
+                        <li>JavaScript & TypeScript</li>
+                        <li>PHP & Python</li>
+                        <li>C# & Go</li>
+                        <li>Rust & More</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon automation-icon"></div>
+                    <h3>Automation</h3>
+                    <p>Streamline your workflows with custom automation solutions for browsers and desktops.</p>
+                    <ul class="service-details">
+                        <li>Browser Automation</li>
+                        <li>Desktop Automation</li>
+                        <li>Workflow Optimization</li>
+                        <li>Task Scheduling</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon devops-icon"></div>
+                    <h3>DevOps</h3>
+                    <p>Comprehensive DevOps solutions to optimize your development and deployment processes.</p>
+                    <ul class="service-details">
+                        <li>NGINX Reverse Proxies</li>
+                        <li>IPv4/IPv6 Hardening</li>
+                        <li>CI/CD Pipelines</li>
+                        <li>Docker & Kubernetes</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon linux-icon"></div>
+                    <h3>Linux Administration</h3>
+                    <p>Expert management and optimization of Linux systems for maximum performance and security.</p>
+                    <ul class="service-details">
+                        <li>Debian & Ubuntu</li>
+                        <li>CentOS & RHEL</li>
+                        <li>Arch Linux</li>
+                        <li>Server Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="skills" class="skills">
+            <h2>My <span class="highlight">Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card" data-skill="javascript">
+                    <div class="skill-icon"></div>
+                    <h3>JavaScript</h3>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="php">
+                    <div class="skill-icon"></div>
+                    <h3>PHP</h3>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="python">
+                    <div class="skill-icon"></div>
+                    <h3>Python</h3>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 92%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="csharp">
+                    <div class="skill-icon"></div>
+                    <h3>C#</h3>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="go">
+                    <div class="skill-icon"></div>
+                    <h3>Go</h3>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="rust">
+                    <div class="skill-icon"></div>
+                    <h3>Rust</h3>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="react">
+                    <div class="skill-icon"></div>
+                    <h3>React</h3>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="express">
+                    <div class="skill-icon"></div>
+                    <h3>Express</h3>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 88%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="mongodb">
+                    <div class="skill-icon"></div>
+                    <h3>MongoDB</h3>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="mysql">
+                    <div class="skill-icon"></div>
+                    <h3>MySQL</h3>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 92%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="docker">
+                    <div class="skill-icon"></div>
+                    <h3>Docker</h3>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 88%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="nginx">
+                    <div class="skill-icon"></div>
+                    <h3>NGINX</h3>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="portfolio" class="portfolio">
+            <h2>My <span class="highlight">Portfolio</span></h2>
+            <p class="section-description">Check out some of my recent projects and hidden features.</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('{{ url_for('static', filename='img/terminal.jpg') }}')"></div>
+                    <div class="portfolio-overlay">
+                        <h3>Terminal Emulator</h3>
+                        <p>A full-screen terminal emulator with custom commands.</p>
+                        <a href="/terminal" class="btn primary-btn">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('{{ url_for('static', filename='img/chat.jpg') }}')"></div>
+                    <div class="portfolio-overlay">
+                        <h3>Real-time Chat</h3>
+                        <p>Global chat system with WebSocket technology.</p>
+                        <a href="#shoutbox" class="btn primary-btn">Try It</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('{{ url_for('static', filename='img/cursor.jpg') }}')"></div>
+                    <div class="portfolio-overlay">
+                        <h3>Cursor Farm</h3>
+                        <p>Real-time cursor tracking with animated cat GIFs.</p>
+                        <a href="#" class="btn primary-btn" id="cursorDemoBtn">Try It</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item secret-item" id="secretItem">
+                    <div class="portfolio-image" style="background-image: url('{{ url_for('static', filename='img/secret.jpg') }}')"></div>
+                    <div class="portfolio-overlay">
+                        <h3>Secret Project</h3>
+                        <p>Find the hidden Easter eggs throughout the site.</p>
+                        <a href="#" class="btn primary-btn" id="secretBtn">Discover</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="easter-egg-hint">
+                <p>Hint: There are 10+ Easter eggs hidden throughout this site. Can you find them all?</p>
+                <div class="egg-counter">
+                    <span id="eggCount">0</span> / <span id="totalEggs">10</span> found
+                </div>
+            </div>
+        </section>
+        
+        <section id="shoutbox" class="shoutbox">
+            <h2>Global <span class="highlight">Shoutbox</span></h2>
+            <div class="visitor-counter">
+                <div class="visitor-stats">
+                    <span id="totalVisitors">{{ visitor_stats.total }}</span> total visitors
+                    <span id="activeVisitors">{{ visitor_stats.active }}</span> currently online
+                </div>
+            </div>
+            
+            <div class="shoutbox-container">
+                <div class="shoutbox-messages" id="shoutboxMessages">
+                    <!-- Messages will be loaded here dynamically -->
+                    <div class="loading-messages">Loading messages...</div>
+                </div>
+                
+                <div class="shoutbox-form">
+                    <input type="text" id="usernameInput" placeholder="Your name" maxlength="20">
+                    <textarea id="messageInput" placeholder="Type your message..." maxlength="500"></textarea>
+                    <button id="sendMessageBtn" class="btn primary-btn">Send</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="music-player" class="music-player">
+            <h2>Now <span class="highlight">Playing</span></h2>
+            <div class="music-container" id="musicContainer">
+                <div class="music-info">
+                    <div class="album-cover" id="albumCover" style="background-image: url('{{ music_data.image if music_data else '/static/img/default_album.png' }}')"></div>
+                    <div class="track-info">
+                        <h3 id="trackTitle">{{ music_data.title if music_data else 'Not playing' }}</h3>
+                        <p id="artistName">{{ music_data.artist if music_data else 'Check back later' }}</p>
+                        <p id="albumName">{{ music_data.album if music_data else '' }}</p>
+                    </div>
+                </div>
+                <div class="music-status">
+                    {% if music_data and music_data.now_playing %}
+                        <span class="now-playing">Now Playing</span>
+                    {% else %}
+                        <span class="last-played">Last Played</span>
+                    {% endif %}
+                </div>
+            </div>
+            <p class="music-attribution">Music data powered by Last.fm</p>
+        </section>
+        
+        <section id="contact" class="contact">
+            <h2>Get In <span class="highlight">Touch</span></h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon email-icon"></div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>your.email@example.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon location-icon"></div>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>Your City, Country</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon social-icon"></div>
+                        <div class="contact-text">
+                            <h3>Social</h3>
+                            <div class="social-links">
+                                <a href="#" class="social-link github-link" target="_blank"></a>
+                                <a href="#" class="social-link linkedin-link" target="_blank"></a>
+                                <a href="#" class="social-link twitter-link" target="_blank"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <div class="form-group">
+                        <label for="nameInput">Name</label>
+                        <input type="text" id="nameInput" placeholder="Your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="emailInput">Email</label>
+                        <input type="email" id="emailInput" placeholder="Your email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subjectInput">Subject</label>
+                        <input type="text" id="subjectInput" placeholder="Subject">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="messageTextarea">Message</label>
+                        <textarea id="messageTextarea" placeholder="Your message"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn primary-btn" id="sendContactBtn">Send Message</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="ads" class="ads">
+            <h2>Cool <span class="highlight">Links</span></h2>
+            <div class="ads-container">
+                <div class="ad-card">
+                    <div class="ad-image" style="background-image: url('{{ url_for('static', filename='img/ad1.jpg') }}')"></div>
+                    <div class="ad-content">
+                        <h3>Project 1</h3>
+                        <p>Check out this awesome project</p>
+                        <a href="#" class="btn secondary-btn" target="_blank">Visit</a>
+                    </div>
+                </div>
+                
+                <div class="ad-card">
+                    <div class="ad-image" style="background-image: url('{{ url_for('static', filename='img/ad2.jpg') }}')"></div>
+                    <div class="ad-content">
+                        <h3>Project 2</h3>
+                        <p>Another cool project to explore</p>
+                        <a href="#" class="btn secondary-btn" target="_blank">Visit</a>
+                    </div>
+                </div>
+                
+                <div class="ad-card">
+                    <div class="ad-image" style="background-image: url('{{ url_for('static', filename='img/ad3.jpg') }}')"></div>
+                    <div class="ad-content">
+                        <h3>Project 3</h3>
+                        <p>One more interesting project</p>
+                        <a href="#" class="btn secondary-btn" target="_blank">Visit</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-text">Portfolio</span>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-social">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link github-link" target="_blank"></a>
+                    <a href="#" class="social-link linkedin-link" target="_blank"></a>
+                    <a href="#" class="social-link twitter-link" target="_blank"></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear">2023</span> Your Name. All rights reserved.</p>
+            <p class="easter-egg-text">There are secrets waiting to be found...</p>
+        </div>
+    </footer>
+    
+    <!-- Secret Button (Hidden) -->
+    <button id="secretEasterEgg" class="secret-button"></button>
+    
+    <!-- Audio Elements -->
+    <audio id="rainSound" loop>
+        <source src="{{ url_for('static', filename='audio/rain.mp3') }}" type="audio/mp3">
+    </audio>
+    
+    <audio id="easterEggSound">
+        <source src="{{ url_for('static', filename='audio/discovery.mp3') }}" type="audio/mp3">
+    </audio>
+    
+    <!-- Socket.IO -->
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    
+    <!-- Main Scripts -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/cursor.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/easter-eggs.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/shoutbox.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/music.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/rain.js') }}"></script>
+</body>
+</html>

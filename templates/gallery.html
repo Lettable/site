@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/gallery.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+</head>
+<body>
+    <div class="rain-container" id="rainContainer"></div>
+    
+    <div class="cursor-container" id="cursorContainer"></div>
+    
+    <header>
+        <div class="logo">
+            <a href="{{ url_for('index') }}">
+                <span class="logo-text">Portfolio</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}#hero">Home</a></li>
+                <li><a href="{{ url_for('index') }}#services">Services</a></li>
+                <li><a href="{{ url_for('index') }}#skills">Skills</a></li>
+                <li><a href="{{ url_for('index') }}#portfolio">Portfolio</a></li>
+                <li><a href="{{ url_for('index') }}#contact">Contact</a></li>
+                <li><a href="{{ url_for('gallery') }}" class="active">Gallery</a></li>
+                <li><a href="#" id="settingsToggle">Settings</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="menuToggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+    
+    <div class="settings-panel" id="settingsPanel">
+        <h3>Settings</h3>
+        <div class="settings-option">
+            <label for="showOwnCursor">Show Own Cursor</label>
+            <input type="checkbox" id="showOwnCursor" checked>
+        </div>
+        <div class="settings-option">
+            <label for="showOtherCursors">Show Other Cursors</label>
+            <input type="checkbox" id="showOtherCursors" checked>
+        </div>
+        <div class="settings-option">
+            <label for="playRainSound">Play Rain Sound</label>
+            <input type="checkbox" id="playRainSound">
+        </div>
+        <div class="settings-option">
+            <label for="showRainEffect">Show Rain Effect</label>
+            <input type="checkbox" id="showRainEffect" checked>
+        </div>
+        <div class="settings-option">
+            <label for="darkMode">Dark Mode</label>
+            <input type="checkbox" id="darkMode" checked>
+        </div>
+    </div>
+    
+    <main>
+        <section class="gallery-section">
+            <h1>Photo <span class="highlight">Gallery</span></h1>
+            
+            {% if photos %}
+                <div class="gallery-grid">
+                    {% for photo in photos %}
+                        <div class="gallery-item" data-id="{{ photo.id }}">
+                            <div class="gallery-image">
+                                <img src="{{ url_for('static', filename='uploads/' + photo.filename) }}" alt="{{ photo.title }}">
+                            </div>
+                            <div class="gallery-overlay">
+                                <h3>{{ photo.title }}</h3>
+                                <p>{{ photo.description }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="no-photos">
+                    <p>No photos have been uploaded yet.</p>
+                </div>
+            {% endif %}
+        </section>
+    </main>
+    
+    <div class="gallery-modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <img id="modalImage" src="/placeholder.svg" alt="">
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+            </div>
+            <div class="modal-navigation">
+                <button id="prevImage" class="nav-btn">&lt;</button>
+                <button id="nextImage" class="nav-btn">&gt;</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-text">Portfolio</span>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{{ url_for('index') }}#hero">Home</a></li>
+                    <li><a href="{{ url_for('index') }}#services">Services</a></li>
+                    <li><a href="{{ url_for('index') }}#skills">Skills</a></li>
+                    <li><a href="{{ url_for('index') }}#portfolio">Portfolio</a></li>
+                    <li><a href="{{ url_for('index') }}#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-social">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link github-link" target="_blank"></a>
+                    <a href="#" class="social-link linkedin-link" target="_blank"></a>
+                    <a href="#" class="social-link twitter-link" target="_blank"></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear">2023</span> Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Audio Elements -->
+    <audio id="rainSound" loop>
+        <source src="{{ url_for('static', filename='audio/rain.mp3') }}" type="audio/mp3">
+    </audio>
+    
+    <!-- Socket.IO -->
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    
+    <!-- Main Scripts -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/cursor.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/rain.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/gallery.js') }}"></script>
+</body>
+</html>

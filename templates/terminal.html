@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal - Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/terminal.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <div class="terminal-button close"></div>
+                <div class="terminal-button minimize"></div>
+                <div class="terminal-button maximize"></div>
+            </div>
+            <div class="terminal-title">portfolio@terminal:~</div>
+        </div>
+        
+        <div class="terminal-body" id="terminalBody">
+            <div class="terminal-line">
+                <span class="terminal-prompt">portfolio@terminal:~$</span>
+                <span class="terminal-welcome">Welcome to the Portfolio Terminal. Type 'help' to see available commands.</span>
+            </div>
+        </div>
+        
+        <div class="terminal-input-line">
+            <span class="terminal-prompt">portfolio@terminal:~$</span>
+            <input type="text" id="terminalInput" autofocus>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/terminal.js') }}"></script>
+</body>
+</html>
