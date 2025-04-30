@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
           case "portfolio.json":
             output.innerHTML = `
                             <pre style="color: #2196f3;">{
-  "name": "Your Name",
+  "name": "Mirza",
   "title": "Full Stack Developer",
   "skills": [
     "JavaScript", "PHP", "Python", "C#", 
@@ -153,8 +153,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   ],
   "contact": {
-    "email": "your.email@example.com",
-    "location": "Your City, Country"
+    "email": "contact@mirza.ink",
+    "location": "Internet :)"
   }
 }</pre>
                         `
