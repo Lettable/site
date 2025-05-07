@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mirza</title>
+    <title>Rehman Majeed | SEO - Ebay</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap">
@@ -17,7 +17,7 @@
     
     <header>
         <div class="logo" id="logo">
-            <span class="logo-text">Mirza</span>
+            <span class="logo-text">Rehman</span>
             <div class="status-indicator" data-status="{{ status.status }}">
                 <span class="status-dot"></span>
                 <span class="status-text">{{ status.status }}</span>
@@ -31,7 +31,6 @@
                 <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
                 <li><a href="/gallery" class="nav-link">Gallery</a></li>
-                <li><a href="#" id="settingsToggle" class="nav-link">Settings</a></li>
             </ul>
         </nav>
         <div class="menu-toggle" id="menuToggle">
@@ -68,8 +67,8 @@
     <main>
         <section id="hero" class="hero">
             <div class="hero-content">
-                <h1 class="animated-text">Hi, I'm <span class="highlight">Mirza</span></h1>
-                <p class="tagline">Expert in <span class="typing-text" id="typingText">Coding, Automation, DevOps, Networking</span></p>
+                <h1 class="animated-text">Hi, I'm <span class="highlight">Rehman</span></h1>
+                <p class="tagline">Expert in <span class="typing-text" id="typingText">eBay, Amazon, Etsy, Shopify, Listings, Account Management</span></p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn primary-btn">Hire Me</a>
                     <a href="#portfolio" class="btn secondary-btn">View Portfolio</a>
@@ -88,50 +87,46 @@
             <h2>Services <span class="highlight">I Offer</span></h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon coding-icon"></div>
-                    <h3>Coding</h3>
-                    <p>Expert development in multiple languages and frameworks with a focus on clean, efficient code.</p>
+                    <h3>Marketplace Management</h3>
+                    <p>Professional management of seller accounts across eBay, Amazon, Etsy, and Shopify to ensure smooth operations and growth.</p>
                     <ul class="service-details">
-                        <li>JavaScript & TypeScript</li>
-                        <li>PHP & Python</li>
-                        <li>C# & Go</li>
-                        <li>Rust & More</li>
+                        <li>eBay Account Management</li>
+                        <li>Amazon Seller Central</li>
+                        <li>Etsy Shop Operations</li>
+                        <li>Shopify Store Handling</li>
                     </ul>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon automation-icon"></div>
-                    <h3>Automation</h3>
-                    <p>Streamline your workflows with custom automation solutions for browsers and desktops.</p>
+                    <h3>Product Listings</h3>
+                    <p>Creation and optimization of high-converting product listings with a focus on visibility, SEO, and buyer engagement.</p>
                     <ul class="service-details">
-                        <li>Browser Automation</li>
-                        <li>Desktop Automation</li>
-                        <li>Workflow Optimization</li>
-                        <li>Task Scheduling</li>
+                        <li>eBay Listing Creation & SEO</li>
+                        <li>Amazon Listings (FBA/FBM)</li>
+                        <li>Etsy Product & Digital Listings</li>
+                        <li>Shopify Product Uploads</li>
                     </ul>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon devops-icon"></div>
-                    <h3>DevOps</h3>
-                    <p>Comprehensive DevOps solutions to optimize your development and deployment processes.</p>
+                    <h3>Store Strategy</h3>
+                    <p>Helping online businesses scale through data-driven strategies, platform best practices, and performance tracking.</p>
                     <ul class="service-details">
-                        <li>NGINX Reverse Proxies</li>
-                        <li>IPv4/IPv6 Hardening</li>
-                        <li>CI/CD Pipelines</li>
-                        <li>Docker & Kubernetes</li>
+                        <li>Marketplace SEO & Analytics</li>
+                        <li>Competitor Benchmarking</li>
+                        <li>Product Positioning</li>
+                        <li>Platform-Specific Strategy</li>
                     </ul>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon linux-icon"></div>
-                    <h3>Linux Administration</h3>
-                    <p>Expert management and optimization of Linux systems for maximum performance and security.</p>
+                    <h3>Customer Experience</h3>
+                    <p>Maintaining a professional, responsive buyer experience to build trust, improve ratings, and boost repeat sales.</p>
                     <ul class="service-details">
-                        <li>Debian & Ubuntu</li>
-                        <li>CentOS & RHEL</li>
-                        <li>Arch Linux</li>
-                        <li>Server Optimization</li>
+                        <li>Order Handling & Fulfillment Coordinationu</li>
+                        <li>Messaging & Buyer Inquiries</li>
+                        <li>Return & Dispute Resolution</li>
+                        <li>Review/Feedback Optimization</li>
                     </ul>
                 </div>
             </div>
@@ -140,153 +135,133 @@
         <section id="skills" class="skills">
             <h2>My <span class="highlight">Skills</span></h2>
             <div class="skills-grid">
-                <div class="skill-card" data-skill="javascript">
+                <div class="skill-card" data-skill="ebay-listing">
                     <div class="skill-icon"></div>
-                    <h3>JavaScript</h3>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 95%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-card" data-skill="php">
-                    <div class="skill-icon"></div>
-                    <h3>PHP</h3>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-card" data-skill="python">
-                    <div class="skill-icon"></div>
-                    <h3>Python</h3>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 92%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-card" data-skill="csharp">
-                    <div class="skill-icon"></div>
-                    <h3>C#</h3>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-card" data-skill="go">
-                    <div class="skill-icon"></div>
-                    <h3>Go</h3>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 80%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-card" data-skill="rust">
-                    <div class="skill-icon"></div>
-                    <h3>Rust</h3>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 75%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-card" data-skill="react">
-                    <div class="skill-icon"></div>
-                    <h3>React</h3>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-card" data-skill="express">
-                    <div class="skill-icon"></div>
-                    <h3>Express</h3>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 88%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-card" data-skill="mongodb">
-                    <div class="skill-icon"></div>
-                    <h3>MongoDB</h3>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-card" data-skill="mysql">
-                    <div class="skill-icon"></div>
-                    <h3>MySQL</h3>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 92%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-card" data-skill="docker">
-                    <div class="skill-icon"></div>
-                    <h3>Docker</h3>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 88%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-card" data-skill="nginx">
-                    <div class="skill-icon"></div>
-                    <h3>NGINX</h3>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 90%;"></div>
-                    </div>
+                    <h3>eBay Listing</h3>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 95%;"></div>
                 </div>
             </div>
+            <div class="skill-card" data-skill="ebay-management">
+                <div class="skill-icon"></div>
+                <h3>eBay Account Management</h3>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 90%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-skill="amazon-listing">
+                <div class="skill-icon"></div>
+                <h3>Amazon Listing</h3>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 92%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-skill="amazon-management">
+                <div class="skill-icon"></div>
+                <h3>Amazon Account Management</h3>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 89%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-skill="etsy-listing">
+                <div class="skill-icon"></div>
+                <h3>Etsy Listing</h3>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 91%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-skill="etsy-management">
+                <div class="skill-icon"></div>
+                <h3>Etsy Account Management</h3>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 87%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-skill="shopify-listing">
+                <div class="skill-icon"></div>
+                <h3>Shopify Product Upload</h3>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 93%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-skill="shopify-management">
+                <div class="skill-icon"></div>
+                <h3>Shopify Store Management</h3>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 90%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-skill="product-research">
+                <div class="skill-icon"></div>
+                <h3>Product Research</h3>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 88%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-skill="seo">
+                <div class="skill-icon"></div>
+                <h3>Marketplace SEO</h3>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 86%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-skill="fulfillment">
+                <div class="skill-icon"></div>
+                <h3>Order Fulfillment</h3>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 84%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-skill="support">
+                <div class="skill-icon"></div>
+                <h3>Customer Service</h3>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 89%;"></div>
+                </div>
+            </div>
+        </div>
         </section>
         
         <section id="portfolio" class="portfolio">
-            <h2>My <span class="highlight">Portfolio</span></h2>
-            <p class="section-description">Check out some of my recent projects and hidden features.</p>
-            
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-image" style="background-image: url('{{ url_for('static', filename='img/terminal.jpg') }}')"></div>
-                    <div class="portfolio-overlay">
-                        <h3>Terminal Emulator</h3>
-                        <p>A full-screen terminal emulator with custom commands.</p>
-                        <a href="/terminal" class="btn primary-btn">View Project</a>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <div class="portfolio-image" style="background-image: url('{{ url_for('static', filename='img/chat.jpg') }}')"></div>
-                    <div class="portfolio-overlay">
-                        <h3>Real-time Chat</h3>
-                        <p>Global chat system with WebSocket technology.</p>
-                        <a href="#shoutbox" class="btn primary-btn">Try It</a>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <div class="portfolio-image" style="background-image: url('{{ url_for('static', filename='img/cursor.jpg') }}')"></div>
-                    <div class="portfolio-overlay">
-                        <h3>Cursor Farm</h3>
-                        <p>Real-time cursor tracking with animated cat GIFs.</p>
-                        <a href="#" class="btn primary-btn" id="cursorDemoBtn">Try It</a>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item secret-item" id="secretItem">
-                    <div class="portfolio-image" style="background-image: url('{{ url_for('static', filename='img/secret.jpg') }}')"></div>
-                    <div class="portfolio-overlay">
-                        <h3>Secret Project</h3>
-                        <p>Find the hidden Easter eggs throughout the site.</p>
-                        <a href="#" class="btn primary-btn" id="secretBtn">Discover</a>
-                    </div>
-                </div>
+    <h2>Client <span class="highlight">Reviews</span></h2>
+    <p class="section-description">Here are some recent reviews from clients I've worked with across eBay, Amazon, Etsy, and Shopify.</p>
+
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <div class="portfolio-image" style="background-image: url('https://i.postimg.cc/VN8KTjx9/image.png')"></div>
+            <div class="portfolio-overlay">
+                <a href="https://www.fiverr.com/s/zWbveed" target="_blank" class="btn primary-btn">View Reviews</a>
             </div>
-            
-            <div class="easter-egg-hint">
-                <p>Hint: There are 10+ Easter eggs hidden throughout this site. Can you find them all?</p>
-                <div class="egg-counter">
-                    <span id="eggCount">0</span> / <span id="totalEggs">10</span> found
-                </div>
+        </div>
+
+        <div class="portfolio-item">
+            <div class="portfolio-image" style="background-image: url('https://i.postimg.cc/NMVmhtyh/image.png')"></div>
+            <div class="portfolio-overlay">
+                <a href="https://www.fiverr.com/s/zWbveed" target="_blank" class="btn primary-btn">View Reviews</a>
             </div>
-        </section>
+        </div>
+        
+        <div class="portfolio-item">
+            <div class="portfolio-image" style="background-image: url('{{ url_for('static', filename='img/secret.jpg') }}'); filter: grayscale(0.3);"></div>
+            <div class="portfolio-overlay">
+                <h3>More Reviews Incoming</h3>
+                <p>New feedback will be posted soon. Stay tuned!</p>
+                <a href="https://www.fiverr.com/rehmanseopro/do-ebay-listing-ebay-product-listing-ebay-seo-listing-ebay-product-lister" class="btn primary-btn">Leave a Review</a>
+            </div>
+        </div>
+    </div>
+</section>
+
         
         <section id="shoutbox" class="shoutbox">
             <h2>Global <span class="highlight">Shoutbox</span></h2>
@@ -330,67 +305,27 @@
                     {% endif %}
                 </div>
             </div>
-            <p class="music-attribution">Music data powered by Last.fm</p>
         </section>
         
-        <section id="contact" class="contact">
-            <h2>Get In <span class="highlight">Touch</span></h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon email-icon"></div>
-                        <div class="contact-text">
-                            <h3>Email</h3>
-                            <p>contact@mirza.ink</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon location-icon"></div>
-                        <div class="contact-text">
-                            <h3>Location</h3>
-                            <p>Internet :)</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon social-icon"></div>
-                        <div class="contact-text">
-                            <h3>Social</h3>
-                            <div class="social-links">
-                                <a href="#" class="social-link github-link" target="_blank"></a>
-                                <a href="#" class="social-link linkedin-link" target="_blank"></a>
-                                <a href="#" class="social-link twitter-link" target="_blank"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <div class="form-group">
-                        <label for="nameInput">Name</label>
-                        <input type="text" id="nameInput" placeholder="Your name">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="emailInput">Email</label>
-                        <input type="email" id="emailInput" placeholder="Your email">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subjectInput">Subject</label>
-                        <input type="text" id="subjectInput" placeholder="Subject">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="messageTextarea">Message</label>
-                        <textarea id="messageTextarea" placeholder="Your message"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn primary-btn" id="sendContactBtn">Send Message</button>
-                </div>
-            </div>
-        </section>
+        <section class="trusted-section">
+  <h2>Worked With <span class="highlight">Top Brands</span></h2>
+  <div class="logo-marquee">
+    <div class="logo-row">
+      <a href="https://www.ebay.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.svg" alt="eBay" /></a>
+      <a href="https://www.amazon.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" /></a>
+      <a href="https://www.etsy.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Etsy_logo.svg" alt="Etsy" /></a>
+        <a href="https://www.etsy.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Etsy_logo.svg" alt="Etsy" /></a>
+      <a href="https://www.shopify.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Shopify_logo_2018.svg" alt="Shopify" /></a>
+    </div>
+    <div class="logo-row reverse">
+      <a href="https://www.walmart.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg" alt="Walmart" /></a>
+      <a href="https://www.fiverr.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Fiverr_Logo_2021.svg" alt="Fiverr" /></a>
+      <a href="https://www.upwork.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Upwork_logo_2021.svg" alt="Upwork" /></a>
+      <a href="https://www.alibaba.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Alibaba_logo.svg" alt="Alibaba" /></a>
+    </div>
+  </div>
+</section>
+
         
 <!--         <section id="ads" class="ads">
             <h2>Cool <span class="highlight">Links</span></h2>
@@ -425,38 +360,48 @@
         </section> -->
     </main>
     
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <span class="logo-text">Portfolio</span>
-            </div>
-            
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-social">
-                <h3>Connect</h3>
-                <div class="social-links">
-                    <a href="#" class="social-link github-link" target="_blank"></a>
-                    <a href="#" class="social-link linkedin-link" target="_blank"></a>
-                    <a href="#" class="social-link twitter-link" target="_blank"></a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; <span id="currentYear">2025</span> Mirza.ink All rights reserved.</p>
-            <p class="easter-egg-text">There are secrets waiting to be found...</p>
-        </div>
-    </footer>
+    <footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-branding">
+      <h2 class="footer-logo">rehmanmajeedproseo.ink</h2>
+      <p class="footer-tagline">Let’s scale your business to the moon 🚀</p>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <ul>
+        <li>Email: <a href="mailto:rehmanmajeed519@gmail.com">rehmanmajeed519@gmail.com</a></li>
+        <li>Phone: <a href="tel:+923130984287">+92 313 0984287</a></li>
+        <li>Fiverr: <a href="https://www.fiverr.com/s/zWbveed" target="_blank">My Fiverr Profile</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h3>Social</h3>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/rehman-majeed-5307ba296" target="_blank" class="social-icon linkedin">LinkedIn</a>
+        <a href="https://www.instagram.com/its_rehman_majeed" target="_blank" class="social-icon instagram">Instagram</a>
+        <a href="https://www.fiverr.com/s/zWbveed" target="_blank" class="social-icon fiverr">Fiverr</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; <span id="currentYear">2025</span> rehmanmajeedproseo.ink. All rights reserved.</p>
+  </div>
+</footer>
+
     
     <!-- Secret Button (Hidden) -->
     <button id="secretEasterEgg" class="secret-button"></button>
