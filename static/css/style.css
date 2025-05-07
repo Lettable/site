@@ -550,52 +550,52 @@ main {
   background-position: center;
 }
 
-[data-skill="javascript"] .skill-icon {
-  background-image: url("/static/img/skills/javascript.svg");
+[data-skill="ebay-listing"] .skill-icon {
+  background-image: url("https://imgs.search.brave.com/sx7OHio6KFbvyL8D5xZo4OSVQyu3gjIm3FqVSYIVIBI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nbWFydC5jb20v/ZmlsZXMvMTUvRUJh/eS1Mb2dvLVBORy1U/cmFuc3BhcmVudC1J/bWFnZS5wbmc");
 }
 
-[data-skill="php"] .skill-icon {
-  background-image: url("/static/img/skills/php.svg");
+[data-skill="ebay-management"] .skill-icon {
+  background-image: url("https://imgs.search.brave.com/sx7OHio6KFbvyL8D5xZo4OSVQyu3gjIm3FqVSYIVIBI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nbWFydC5jb20v/ZmlsZXMvMTUvRUJh/eS1Mb2dvLVBORy1U/cmFuc3BhcmVudC1J/bWFnZS5wbmc");
 }
 
-[data-skill="python"] .skill-icon {
-  background-image: url("/static/img/skills/python.svg");
+[data-skill="amazon-listing"] .skill-icon {
+  background-image: url("https://imgs.search.brave.com/6-Ag3qlJQvMJgtjLvfxeckI81Yma6vlDr-PjXGnPR98/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mcmVl/cG5nbG9nby5jb20v/aW1hZ2VzL2FsbF9p/bWcvMTcxNTQ4Nzk5/OGFtYXpvbi1sb2dv/LXRyYW5zcGFyZW50/LnBuZw");
 }
 
-[data-skill="csharp"] .skill-icon {
-  background-image: url("/static/img/skills/csharp.svg");
+[data-skill="amazon-management"] .skill-icon {
+  background-image: url("https://imgs.search.brave.com/6-Ag3qlJQvMJgtjLvfxeckI81Yma6vlDr-PjXGnPR98/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mcmVl/cG5nbG9nby5jb20v/aW1hZ2VzL2FsbF9p/bWcvMTcxNTQ4Nzk5/OGFtYXpvbi1sb2dv/LXRyYW5zcGFyZW50/LnBuZw");
 }
 
-[data-skill="go"] .skill-icon {
-  background-image: url("/static/img/skills/go.svg");
+[data-skill="etsy-listing"] .skill-icon {
+  background-image: url("https://imgs.search.brave.com/oSEeuiEmL9GCyLZa7TDwnkkoVK-7EQu7KtuQG4cRtlY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mcmVl/bG9nb3BuZy5jb20v/aW1hZ2VzL2FsbF9p/bWcvMTY1OTEwOTg2/N2V0c3ktbG9nby10/cmFuc3BhcmVudC5w/bmc");
 }
 
-[data-skill="rust"] .skill-icon {
-  background-image: url("/static/img/skills/rust.svg");
+[data-skill="etsy-management"] .skill-icon {
+  background-image: url("https://imgs.search.brave.com/oSEeuiEmL9GCyLZa7TDwnkkoVK-7EQu7KtuQG4cRtlY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mcmVl/bG9nb3BuZy5jb20v/aW1hZ2VzL2FsbF9p/bWcvMTY1OTEwOTg2/N2V0c3ktbG9nby10/cmFuc3BhcmVudC5w/bmc");
 }
 
-[data-skill="react"] .skill-icon {
-  background-image: url("/static/img/skills/react.svg");
+[data-skill="shopify-listing"] .skill-icon {
+  background-image: url("https://imgs.search.brave.com/ecghL4UT_hgCS1UMl0siMG7CtGbTwcu3zWV0ao3_FKg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODQ4MmVjMGNlZjEw/MTRjMGI1ZTRhNzAu/cG5n");
 }
 
-[data-skill="express"] .skill-icon {
-  background-image: url("/static/img/skills/express.svg");
+[data-skill="shopify-management"] .skill-icon {
+  background-image: url("https://imgs.search.brave.com/ecghL4UT_hgCS1UMl0siMG7CtGbTwcu3zWV0ao3_FKg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODQ4MmVjMGNlZjEw/MTRjMGI1ZTRhNzAu/cG5n");
 }
 
-[data-skill="mongodb"] .skill-icon {
-  background-image: url("/static/img/skills/mongodb.svg");
+[data-skill="product-research"] .skill-icon {
+  background-image: url("https://imgs.search.brave.com/mF7yDELWOwfR881UGsxSW5qA4fu_aMZAT8kJm5OxNOw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZy/ZWVwaWsuY29tLzI1/Ni83MDc4LzcwNzgz/MTAucG5nP3NlbXQ9/YWlzX2h5YnJpZA");
 }
 
-[data-skill="mysql"] .skill-icon {
-  background-image: url("/static/img/skills/mysql.svg");
+[data-skill="seo"] .skill-icon {
+  background-image: url("https://imgs.search.brave.com/r2-CNozE5ZrXaeWD9qxjsvrMWEc7kAWXh8hwiTRkunI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudmV4ZWxzLmNv/bS9tZWRpYS91c2Vy/cy8zLzE1Mzg3OS9p/c29sYXRlZC9wcmV2/aWV3LzAwNTk5MTQ5/ZTJlYzcxNzg3MjA4/NTY1MGZjOGMxZjA1/LXNlby1zZXR0aW5n/cy1jb2xvcmVkLXN0/cm9rZS1pY29uLnBu/Zw");
 }
 
-[data-skill="docker"] .skill-icon {
-  background-image: url("/static/img/skills/docker.svg");
+[data-skill="fulfillment"] .skill-icon {
+  background-image: url("https://imgs.search.brave.com/l6cR-Np5nnKq10j69unU--GH6LdltpoFhYptxyPe9rY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cHJpbnRlZHRocmVh/ZHMuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDE3LzAxL0Z1/bGZpbGxtZW50LUlj/b24ucG5n");
 }
 
-[data-skill="nginx"] .skill-icon {
-  background-image: url("/static/img/skills/nginx.svg");
+[data-skill="support"] .skill-icon {
+  background-image: url("https://imgs.search.brave.com/ESNkguIAlULyzOxUJWbHlFrVWhCmfAGwjc7ndK_ZtRM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS81/MTIvMTAyOC8xMDI4/OTMxLnBuZw");
 }
 
 .skill-card h3 {
