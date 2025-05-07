@@ -1421,6 +1421,80 @@ footer {
   animation: slideUp 1s ease-in-out;
 }
 
+
+.site-footer {
+  background-color: #111;
+  color: #f4f4f4;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-tagline {
+  margin-top: 8px;
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+.footer-contact ul,
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-contact ul li,
+.footer-links ul li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.footer-contact a,
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-contact a:hover,
+.footer-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-icon {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.social-icon:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.85rem;
+  color: #999;
+}
+
 .pulse {
   animation: pulse 2s infinite;
 }
