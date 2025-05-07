@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const socket = io()
 
   // Generate a random username for this session
-  const sessionUsername = "Nigger" + Math.floor(Math.random() * 1000)
+  const sessionUsername = "Visitor" + Math.floor(Math.random() * 1000)
 
   // Cat GIFs for cursors
   const catGifs = [
