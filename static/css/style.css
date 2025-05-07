@@ -19,6 +19,60 @@
   --font-family: "Montserrat", sans-serif;
 }
 
+.trusted-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.trusted-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.logo-marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-row {
+  display: flex;
+  gap: 60px;
+  padding: 20px 0;
+  animation: scrollLeft 20s linear infinite;
+}
+
+.logo-row.reverse {
+  animation: scrollRight 25s linear infinite;
+}
+
+.logo-row:hover {
+  animation-play-state: paused;
+}
+
+.logo-row img {
+  height: 50px;
+  transition: transform 0.3s ease;
+  filter: grayscale(40%);
+}
+
+.logo-row img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+/* Animations */
+@keyframes scrollLeft {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes scrollRight {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+
 * {
   margin: 0;
   padding: 0;
