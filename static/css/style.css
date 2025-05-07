@@ -460,7 +460,7 @@ main {
   height: 350px;
   border-radius: 50%;
   background-color: var(--bg-lighter);
-  background-image: url("/static/img/profile.jpg");
+  background-image: url("https://i.postimg.cc/631Fr3MG/image.png");
   background-size: cover;
   background-position: center;
   border: 5px solid var(--primary-color);
